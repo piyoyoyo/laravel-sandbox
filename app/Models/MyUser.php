@@ -12,7 +12,7 @@ class MyUser implements Authenticatable
 {
     public function getAuthIdentifierName()
     {
-        return 'id';
+        return 'token';
     }
 
     public function getAuthIdentifier()
@@ -20,9 +20,9 @@ class MyUser implements Authenticatable
         return $this->getId();
     }
 
-    public function getId(): int
+    public function getId(): string
     {
-        return 1;
+        return "token dddddddddd";
     }
 
     public function getAuthPassword(): string
@@ -32,7 +32,7 @@ class MyUser implements Authenticatable
 
     public function getRememberToken(): string
     {
-        throw new Exception(sprintf('Not implemented: %s->%s()', self::class, __FUNCTION__));
+        return "";
     }
 
     public function setRememberToken($value): void
